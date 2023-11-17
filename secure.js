@@ -16,4 +16,6 @@
  * Now, create a middleware to check if the token exists or not.
  * If it exists, verify it using jwt.verify(token, secret, (err, decoded)). If there's an error, handle it; otherwise, assign the decoded token data to 'req.user'.
  * Inside the API, check if the requested user matches the token user. If not, return a 403 (forbidden) status.
+ 
+ res.clearCookie('token', {maxAge: 0}).send({success: true});
  */
